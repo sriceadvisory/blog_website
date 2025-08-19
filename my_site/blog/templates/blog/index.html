@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+	My Blog
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/post.css' %}"/>
+    <link rel="stylesheet" href="{% static 'blog/index.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <header id="main-navigation">
+  <h1><a href="">Shon's Blog</a></h1>
+  <nav>
+    <a href="">All Posts</a>
+  </nav>
+</header>
+
+    <section id="welcome">
+        <header>
+            <img src="{% static 'blog/images/headshot.JPG' %}" alt="Shon -Blog author" />
+            <h1>Welcome to My Little Corner of the internet</h1>
+        </header>
+    <p>Hi I am Shon</p>
+    </section>
+
+    <section>
+    <h2>My latest posts</h2>
+    <ul>
+        {% include 'includes/post.html' %}
+    </ul>
+    </section>
+<section id="about">
+    <h2> What I do</h2>
+    <p>THis si what I sdo.</p>
+    <p>This is how I do it</p>
+</section>
+{% endblock %}

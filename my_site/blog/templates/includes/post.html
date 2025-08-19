@@ -1,0 +1,13 @@
+{% load static %}
+
+<li>
+    <article class="post">
+        <a href="{% url 'post_detail' "the-mountains" %}">
+            <img src="{% static 'blog/images/random.jpg' %}" alt="" style="width: 150px; height: 100px; object-fit: cover;"/>
+            <div class="post_content">
+                <h3>Mountain King</h3>
+                <p>CLick bait title and small paragraph that never happened</p>
+            </div>
+        </a>
+    </article>
+</li>
